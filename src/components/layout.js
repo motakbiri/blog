@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { scale } from '../utils/typography'
 import Mohammad from '../assets/mohammad.jpg'
+import MohammadTransparent from '../assets/transparent2.png'
 
 import Footer from './footer'
 import './global.css'
@@ -57,55 +58,139 @@ const Layout = ({ location, title, children }) => {
     </ThemeToggler>
   )
 
-  const header = (
-    <div style={{flex:1}}>
-      <h2
-        style={{
-          ...scale(1),
-          marginBottom: 0,
-          marginTop: 0,
-          fontFamily: 'Montserrat, sans-serif',
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: 'none',
-            color: 'inherit',
-          }}
-          to={'/'}
+  const navbar = (
+    <navbar className="flex container max-w-screen-lg self-center text-gray-200 mb-12">
+
+    <div className="grid grid-cols-8 gap-4 ">
+    <p className="col-span-4 font-bold text-base pt-6 font-mont"
         >
-          {title}
-        </Link>
-      </h2>
-      <div>
-        <img 
-          className="mt-20 border-solid border-4 border-blue-800 hover:border-pink-500 transition delay-50 duration-300 ease-in-out"
-          style={{borderRadius: '100%', maxWidth: '120px'}}
-          src={Mohammad} 
-          alt="Mohammad Takbiri profile pic">
-        </img>
-        <p style={{
-          ...scale(0.5),
-          marginBottom: 0,
-          marginTop: 0,
-          fontFamily: 'Montserrat, sans-serif',
-        }}>Mohammad Takbiri</p>
-      </div>
+          <Link
+            style={{
+              boxShadow: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            {title}
+          </Link>
+        </p>
+        <p className="font-medium text-base pt-6 font-mont"
+        >
+          <Link
+            style={{
+              boxShadow: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            Blog
+          </Link>
+        </p>
+        <p className="font-medium text-base pt-6 font-mont"
+        >
+          <Link
+            style={{
+              boxShadow: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            About
+          </Link>
+        </p>
+        <p className="font-medium text-base pt-6 font-mont"
+        >
+          <Link
+            style={{
+              boxShadow: 'none',
+              color: 'inherit',
+            }}
+            to={'/'}
+          >
+            Contact
+          </Link>
+        </p>
+        
+        {toggle}
+    </div>
+    
+         
       
-      
+    </navbar>
+  )
+
+  const me = (
+    <div className="flex max-w-screen-md self-center">
+        
+    <h1 className="text-4xl text-gray-200 font-semibold leading-10 pb-8">Welcome, I am Mohammad Takbiri. Software Engineer at <a className="no-underline hover:underline shadow-none" href="https://klue.com">Klue</a>.</h1>
+    <img 
+      className="w-64 m-0"
+      src={MohammadTransparent}  
+      alt="Mohammad Takbiri profile pic">
+    </img>
     </div>
   )
 
+  const recentBlogs = (      
+  <div className="relative py-4 sm:max-w-2xl sm:mx-auto">
+  <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-200 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl m-3"></div>
+  <div className="relative px-4 py-10 shadow-lg sm:rounded-3xl sm:p-20" style={{backgroundColor: 'var(--lightBg)'}}>
+    <div className="max-w-lg mx-auto">
+      <div className="divide-y divide-gray-200">
+        <div className="py-8 text-base leading-6 space-y-4 sm:text-lg sm:leading-7">
+          <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
+          <ul className="list-disc space-y-2">
+            <li className="flex items-start">
+              <span className="h-6 flex items-center sm:h-7">
+                <svg className="flex-shrink-0 h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              <p className="ml-2">
+                Customizing your
+                <code className="text-sm font-bold">tailwind.config.js</code> file
+              </p>
+            </li>
+            <li className="flex items-start">
+              <span className="h-6 flex items-center sm:h-7">
+                <svg className="flex-shrink-0 h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              <p className="ml-2">
+                Extracting classNamees with
+                <code className="text-sm font-bold">@apply</code>
+              </p>
+            </li>
+            <li className="flex items-start">
+              <span className="h-6 flex items-center sm:h-7">
+                <svg className="flex-shrink-0 h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              <p className="ml-2">Code completion with instant preview</p>
+            </li>
+          </ul>
+          <p>Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share online.</p>
+        </div>
+        <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+          <p>Want to dig deeper into Tailwind?</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+)
+
   return (
-    <div
+    <div className="container mx-auto transition duration-200 ease-out"
       style={{
         backgroundColor: 'var(--bg)',
         color: 'var(--textNormal)',
-        transition: 'color 0.2s ease-out, background 0.2s ease-out',
-        minHeight: '100vh',
       }}
     >
-      <div className="sidebar">
+      {/* <div className="sidebar">
         <div
           className="md:h-screen p-12 flex flex-col justify-start items-center"
           style={{ minHeight: 200 }}
@@ -113,10 +198,17 @@ const Layout = ({ location, title, children }) => {
           {header}
           {toggle}
         </div>
-      </div>
+      </div> */}
 
-      <div className="main-content relative">
-        <main>{children}</main>
+      <div className="flex flex-col justify-center">
+      <div className={"flex flex-col bg-gradient-to-l from-teal-500  to-blue-800"}>
+        {navbar}
+        {me}
+      </div>
+        <main>
+        {recentBlogs}
+        {/* {children} */}
+        </main>
         <Footer />
       </div>
     </div>
