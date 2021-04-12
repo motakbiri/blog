@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { scale } from '../utils/typography'
 import Mohammad from '../assets/mohammad.jpg'
-import MohammadTransparent from '../assets/transparent3.png'
+import MohammadTransparent from '../assets/transparent2.png'
 
 import Footer from './footer'
 import './global.css'
@@ -121,12 +121,13 @@ const Layout = ({ location, title, children }) => {
 
   const me = (
     <div className="flex max-w-screen-md self-center">
+    <h1 className="text-4xl text-gray-200 font-semibold leading-10 pb-8">Welcome 👋 I am Mohammad Takbiri. Frontend Engineer at <a className="no-underline hover:underline shadow-none" href="https://klue.com">Klue</a>.</h1>
     <img 
-      className="w-64 m-0"
+      className="w-64 m-0 pl-3"
       src={MohammadTransparent}  
       alt="Mohammad Takbiri profile pic">
     </img>    
-    <h1 className="text-4xl text-gray-200 font-semibold leading-10 pb-8">Welcome 👋 I am Mohammad Takbiri. Frontend Engineer at <a className="no-underline hover:underline shadow-none" href="https://klue.com">Klue</a>.</h1>
+    
     
     </div>
   )
@@ -165,7 +166,7 @@ const Layout = ({ location, title, children }) => {
       </div> */}
 
       <div className="flex flex-col justify-center">
-      <div className={"flex flex-col bg-gradient-to-tl from-red-700  to-blue-800"}>
+      <div className={"flex flex-col bg-gradient-to-tr from-red-700  to-blue-800"}>
         {navbar}
         {me}
       </div>
