@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { scale } from '../utils/typography'
 import Mohammad from '../assets/mohammad.jpg'
-import MohammadTransparent from '../assets/transparent2.png'
+import MohammadTransparent from '../assets/transparent3.png'
 
 import Footer from './footer'
 import './global.css'
@@ -121,24 +121,25 @@ const Layout = ({ location, title, children }) => {
 
   const me = (
     <div className="flex max-w-screen-md self-center">
-        
-    <h1 className="text-4xl text-gray-200 font-semibold leading-10 pb-8">Welcome, I am Mohammad Takbiri. Software Engineer at <a className="no-underline hover:underline shadow-none" href="https://klue.com">Klue</a>.</h1>
     <img 
       className="w-64 m-0"
       src={MohammadTransparent}  
       alt="Mohammad Takbiri profile pic">
-    </img>
+    </img>    
+    <h1 className="text-4xl text-gray-200 font-semibold leading-10 pb-8">Welcome 👋 I am Mohammad Takbiri. Frontend Engineer at <a className="no-underline hover:underline shadow-none" href="https://klue.com">Klue</a>.</h1>
+    
     </div>
   )
 
   const recentBlogs = (      
-  <div className="relative py-4 sm:max-w-2xl sm:mx-auto">
-  <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-200 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl m-3"></div>
-  <div className="relative px-4 py-10 shadow-lg sm:rounded-3xl sm:p-20" style={{backgroundColor: 'var(--lightBg)'}}>
+  <div className="relative py-4 sm:max-w-3xl sm:mx-auto">
+  <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-blue-200 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl m-3"></div>
+  <div className="relative px-4 py-6 shadow-lg sm:rounded-3xl sm:p-20" style={{backgroundColor: 'var(--lightBg)'}}>
     <div className="max-w-lg mx-auto">
       <div className="divide-y divide-gray-200">
         <div className="py-8 text-base leading-6 space-y-4 sm:text-lg sm:leading-7">
-          <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
+          <h2 className="mt-0">Recent Blog Posts</h2>
+          {children}
           <ul className="list-disc space-y-2">
             <li className="flex items-start">
               <span className="h-6 flex items-center sm:h-7">
@@ -201,7 +202,7 @@ const Layout = ({ location, title, children }) => {
       </div> */}
 
       <div className="flex flex-col justify-center">
-      <div className={"flex flex-col bg-gradient-to-l from-teal-500  to-blue-800"}>
+      <div className={"flex flex-col bg-gradient-to-tl from-red-700  to-blue-800"}>
         {navbar}
         {me}
       </div>

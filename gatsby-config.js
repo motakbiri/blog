@@ -3,11 +3,11 @@ module.exports = {
   siteMetadata: {
     title: 'Mohamad\'s Blog',
     author: {
-      name: '@ry_zou',
+      name: '@mohamad',
       summary: 'web dev',
     },
-    description: 'A simple, fixed sidebar two columns Gatsby.js blog starter.',
-    siteUrl: 'https://renyuanz.github.io/leonids',
+    description: 'Mohamad blog.',
+    siteUrl: 'https://mohamad.blog',
     social: {
       twitter: 'ry_zou',
     },
@@ -55,20 +55,20 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-62251910-1',
+        trackingId: 'UA-11111111-1',
       },
     },
     'gatsby-plugin-feed',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Ryz',
-        short_name: 'Ryz',
+        name: 'Mohamad',
+        short_name: 'Mohamad',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'content/assets/gatsby-icon.png',
+        icon: 'content/assets/profile.jpg',
       },
     },
     'gatsby-plugin-react-helmet',
