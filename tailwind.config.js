@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         custom: {
           100: '#6bdaff',
-          200: '#33AEF4'
+          200: '#33AEF4',
+          300: '#3155dc'
         },
       },
       fontFamily: {
@@ -17,6 +18,9 @@ module.exports = {
         serif: ['Merriweather', 'serif'],
         mont: ['Montserrat']
       },
+      lineHeight: {
+        '12': '3rem',
+       },
     }
   },
   variants: {},

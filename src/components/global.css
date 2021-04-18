@@ -2,7 +2,7 @@
 
 body {
   --bg: #f0f0f0;
-  --lightBg: #f9f9f9;
+  --lightBg: #fcfcfc;
   --textNormal: #181818;
   --textTitle: #181818;
   --textLink: #33AEF4;
@@ -15,8 +15,8 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
 
-  --bg: #1E1E36;
-  --lightBg: #2a4365;
+  --bg: #080E24;
+  --lightBg: #1c2e4a;
   --textNormal: #e0e0e0;
   --textTitle: #fff;
   --textLink: #6bdaff;
