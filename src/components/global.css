@@ -1,8 +1,8 @@
 @tailwind utilities;
 
 body {
-  --bg: #f0f0f0;
-  --lightBg: #fcfcfc;
+  --bg: #fafafa;
+  --lightBg: #ffffff;
   --textNormal: #181818;
   --textTitle: #181818;
   --textLink: #33AEF4;

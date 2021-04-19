@@ -10,9 +10,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={location} title="Home">
+    <Layout location={location} title={siteTitle} type="blog">
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -59,14 +60,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={'/blog'+previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={'/blog'+next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

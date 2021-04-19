@@ -1,9 +1,9 @@
 // Gatsby supports TypeScript natively!
-import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import React from 'react'
+import { PageProps, Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { rhythm } from '../utils/typography'
 
 type PageContext = {
   currentPage: number
@@ -43,8 +43,8 @@ const BlogIndex = ({
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-  const nextPage = `/${currentPage + 1}`
+  const prevPage = currentPage - 1 === 1 ? '/blog' : `/${currentPage - 1}`
+  const nextPage = `/blog/${currentPage + 1}`
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -59,7 +59,10 @@ const BlogIndex = ({
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link
+                  style={{ boxShadow: `none` }}
+                  to={'/blog' + node.fields.slug}
+                >
                   {title}
                 </Link>
               </h3>

@@ -9,7 +9,7 @@ module.exports = {
     description: 'Mohamad blog.',
     siteUrl: 'https://mohamad.blog',
     social: {
-      twitter: 'ry_zou',
+      twitter: 'mohammadtkbr',
     },
     defaultImage: 'images/bg.jpeg',
   },

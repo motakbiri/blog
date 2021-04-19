@@ -1,9 +1,9 @@
 // Gatsby supports TypeScript natively!
-import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import React from 'react'
+import { PageProps, Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { rhythm } from '../utils/typography'
 
 type PageContext = {
   currentPage: number
@@ -40,9 +40,8 @@ const RecentBlogIndex = ({
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} type="root">
       <SEO title="Recent posts" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
@@ -54,7 +53,10 @@ const RecentBlogIndex = ({
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link
+                  style={{ boxShadow: `none` }}
+                  to={'/blog' + node.fields.slug}
+                >
                   {title}
                 </Link>
               </h3>
@@ -72,10 +74,9 @@ const RecentBlogIndex = ({
       })}
 
       <nav className="pt-16">
-          
-              <Link to='/' rel="all" >
-                View all blog posts
-              </Link>
+        <Link to="/blog" rel="all">
+          View all blog posts
+        </Link>
       </nav>
     </Layout>
   )
