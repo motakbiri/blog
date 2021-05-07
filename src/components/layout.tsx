@@ -113,7 +113,7 @@ const Layout = ({ location, title, children, type }) => {
   )
 
   const me = (
-    <div className="flex max-w-screen-md self-center m-auto">
+    <div className="flex max-w-screen-md self-center m-auto px-4">
       <h1 className="text-4xl text-gray-200 font-semibold leading-12 pb-8">
         Welcome 👋 I am Mohammad Takbiri. Frontend Engineer at{' '}
         <a
