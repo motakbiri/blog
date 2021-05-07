@@ -60,11 +60,12 @@ const Layout = ({ location, title, children, type }) => {
   )
 
   const navbar = (
-    <nav className="container self-center mb-12 px-4">
+    <nav className="container self-center mb-12 px-4 pt-5">
       <div className="grid grid-cols-10 gap-4 max-w-screen-lg m-auto font-mont">
         <p className="col-span-8 font-bold text-base pt-6 sm:col-span-6">
           <Link
             style={{
+              ...scale(0.23),
               boxShadow: 'none',
               color: isRoot ? 'inherit' : 'var(--textLogo)',
             }}
@@ -113,7 +114,7 @@ const Layout = ({ location, title, children, type }) => {
   )
 
   const me = (
-    <div className="flex max-w-screen-md self-center m-auto px-4">
+    <div className="flex max-w-screen-md self-center m-auto px-4 pb-10">
       <h1 className="text-4xl text-gray-200 font-semibold leading-12 pb-8">
         Welcome 👋 I am Mohammad Takbiri. Frontend Engineer at{' '}
         <a
