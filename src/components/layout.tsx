@@ -61,8 +61,8 @@ const Layout = ({ location, title, children, type }) => {
 
   const navbar = (
     <nav className="container self-center mb-12 px-4 pt-5">
-      <div className="grid grid-cols-10 gap-4 max-w-screen-lg m-auto font-mont">
-        <p className="col-span-8 font-bold text-base pt-6 sm:col-span-6">
+      <div className="grid grid-cols-10 gap-4 max-w-screen-md lg:max-w-screen-lg m-auto font-mont">
+        <p className="col-span-8 font-bold  pt-6 sm:col-span-6 ">
           <Link
             style={{
               ...scale(0.23),
@@ -74,7 +74,7 @@ const Layout = ({ location, title, children, type }) => {
             {title}
           </Link>
         </p>
-        <p className="hidden font-medium text-base pt-6  sm:block">
+        <p className="hidden font-medium font-inter pt-6  sm:block">
           <Link
             style={{
               boxShadow: 'none',
@@ -85,7 +85,7 @@ const Layout = ({ location, title, children, type }) => {
             Blog
           </Link>
         </p>
-        <p className="hidden font-medium text-base pt-6 sm:block">
+        <p className="hidden font-medium font-inter pt-6 sm:block">
           <Link
             style={{
               boxShadow: 'none',
@@ -96,7 +96,7 @@ const Layout = ({ location, title, children, type }) => {
             About
           </Link>
         </p>
-        <p className="hidden font-medium text-base pt-6 sm:block">
+        <p className="hidden font-medium font-inter pt-6 sm:block">
           <Link
             style={{
               boxShadow: 'none',
