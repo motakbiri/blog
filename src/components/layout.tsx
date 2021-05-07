@@ -21,7 +21,7 @@ const Layout = ({ location, title, children, type }) => {
         return (
           <button
             aria-label="theme-switch"
-            className="p-5"
+            className="sm:p-5"
             onClick={() => toggleTheme(isDarkMode ? 'light' : 'dark')}
           >
             {isDarkMode ? (
