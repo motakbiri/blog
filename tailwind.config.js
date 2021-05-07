@@ -16,7 +16,8 @@ module.exports = {
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
-        mont: ['Montserrat']
+        mont: ['Montserrat'],
+        inter: ['Inter']
       },
       lineHeight: {
         '12': '3rem',

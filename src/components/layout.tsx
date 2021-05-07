@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { scale } from '../utils/typography'
-import Mohammad from '../assets/mohammad.jpg'
-import MohammadTransparent from '../assets/transparent2.png'
+
 
 import Footer from './footer'
 import './global.css'
@@ -61,20 +60,20 @@ const Layout = ({ location, title, children, type }) => {
   )
 
   const navbar = (
-    <navbar className="container self-center mb-12">
-      <div className="grid grid-cols-8 gap-4 max-w-screen-md m-auto">
-        <p className="col-span-4 font-bold text-base pt-6 font-mont">
+    <nav className="container self-center mb-12 px-4">
+      <div className="grid grid-cols-10 gap-4 max-w-screen-lg m-auto font-mont">
+        <p className="col-span-8 font-bold text-base pt-6 sm:col-span-6">
           <Link
             style={{
               boxShadow: 'none',
-              color: 'inherit',
+              color: isRoot ? 'inherit' : 'var(--textLogo)',
             }}
             to={'/'}
           >
             {title}
           </Link>
         </p>
-        <p className="font-medium text-base pt-6 font-mont">
+        <p className="hidden font-medium text-base pt-6  sm:block">
           <Link
             style={{
               boxShadow: 'none',
@@ -85,7 +84,7 @@ const Layout = ({ location, title, children, type }) => {
             Blog
           </Link>
         </p>
-        <p className="font-medium text-base pt-6 font-mont">
+        <p className="hidden font-medium text-base pt-6 sm:block">
           <Link
             style={{
               boxShadow: 'none',
@@ -96,7 +95,7 @@ const Layout = ({ location, title, children, type }) => {
             About
           </Link>
         </p>
-        <p className="font-medium text-base pt-6 font-mont">
+        <p className="hidden font-medium text-base pt-6 sm:block">
           <Link
             style={{
               boxShadow: 'none',
@@ -110,7 +109,7 @@ const Layout = ({ location, title, children, type }) => {
 
         {toggle}
       </div>
-    </navbar>
+    </nav>
   )
 
   const me = (
@@ -156,7 +155,7 @@ const Layout = ({ location, title, children, type }) => {
     <div
       className="container mx-auto transition duration-200 ease-out"
       style={{
-        backgroundColor: 'var(--bg)',
+        backgroundColor: isRoot ? 'var(--bg)' : 'var(--lightBg)' ,
         color: 'var(--textNormal)',
       }}
     >
@@ -189,7 +188,7 @@ const Layout = ({ location, title, children, type }) => {
           ) : (
             <>
                 {navbar}
-              <div className={'flex flex-col max-w-screen-md m-auto relative py-4 sm:max-w-3xl sm:mx-auto '} style={{maxWidth:'800px'}}>
+              <div className={'flex flex-col max-w-screen-md m-auto relative py-4 sm:max-w-3xl sm:mx-auto px-4'} style={{maxWidth:'800px'}}>
                 {children}
               </div>
             </>

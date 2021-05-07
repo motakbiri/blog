@@ -73,7 +73,7 @@ const RecentBlogIndex = ({
         )
       })}
 
-      <nav className="pt-16">
+      <nav className="pt-16 font-inter">
         <Link to="/blog" rel="all">
           View all blog posts
         </Link>

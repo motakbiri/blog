@@ -1,10 +1,11 @@
 @tailwind utilities;
 
 body {
-  --bg: #fafafa;
-  --lightBg: #ffffff;
+  --bg: #f5f5f5;
+  --lightBg: #fcfcfc;
   --textNormal: #181818;
   --textTitle: #181818;
+  --textLogo: #33AEF4;
   --textLink: #33AEF4;
   --hr: hsla(0, 20%, 1%, 0.2);
   --imageBorder : var(var(--textLink));
@@ -17,8 +18,9 @@ body.dark {
 
   --bg: #080E24;
   --lightBg: #1c2e4a;
-  --textNormal: #e0e0e0;
+  --textNormal: #e6e6e6;
   --textTitle: #fff;
+  --textLogo: #fff;
   --textLink: #6bdaff;
   --hr: hsla(0, 0%, 100%, 0.2);
   --imageBorder : var(var(--textLink));
@@ -43,6 +45,18 @@ h6,
 blockquote {
   color: var(--textTitle);
 }
+
+.section,
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6,
+blockquote {
+  font-family: 'Inter';
+}
+
 
 .footnotes {
   word-break: break-all;
@@ -94,6 +108,8 @@ button {
   padding: 0 20px 0;
   margin-left: 0;
 }
+
+
 
 @media only screen and (min-width: 768px) {
   .sidebar {

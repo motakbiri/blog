@@ -18,10 +18,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
+      <article className="section">
+        <header className="text-center">
           <h1
             style={{
+              ...scale(1.3),
               marginBottom: 0,
             }}
           >
@@ -48,7 +49,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </footer>
       </article>
 
-      <nav>
+      <nav className='font-inter'> 
         <ul
           style={{
             display: 'flex',

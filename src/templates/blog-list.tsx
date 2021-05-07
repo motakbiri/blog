@@ -79,7 +79,7 @@ const BlogIndex = ({
         )
       })}
 
-      <nav>
+      <nav className="font-inter">
         <ul
           style={{
             display: `flex`,
