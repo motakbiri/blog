@@ -1,13 +1,14 @@
 ---
-title: Sample Post
-date: "2020-07-27T07:26:03.284Z"
+title: Tips for starting a Job as a Frontend Developer
+date: "2021-05-07T07:26:03.284Z"
 description: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-categories: [hello world]
+categories: [soft skills]
 comments: true
 image:
-  feature: https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
-  credit: thomas shellberg
-  creditlink: https://unsplash.com/photos/Ki0dpxd3LGc
+  feature: https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80
+  credit: Leon
+  creditlink: https://unsplash.com/photos/0K7GgiA8lVE
+  desc: new hire image
 ---
 
 ## HTML Elements
@@ -15,6 +16,8 @@ image:
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
 # Heading 1
+
+
 
 ## Heading 2
 

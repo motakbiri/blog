@@ -50,6 +50,7 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
+          marginTop: '5px',
           borderRadius: `100%`,
         }}
         imgStyle={{
@@ -60,7 +61,8 @@ const Bio = () => {
         Written by <strong>{author.name}</strong> {author.summary}
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        <br/>
+          Love to hear from you on twitter
         </a>
       </p>
     </div>

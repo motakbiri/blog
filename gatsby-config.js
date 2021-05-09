@@ -4,7 +4,7 @@ module.exports = {
     title: 'Mohamad\'s Blog',
     author: {
       name: '@mohamad',
-      summary: 'web dev',
+      summary: 'Frontend Engineer',
     },
     description: 'Mohamad blog.',
     siteUrl: 'https://mohamad.blog',
