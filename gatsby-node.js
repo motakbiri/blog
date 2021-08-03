@@ -50,6 +50,14 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   createPage({
+    path: '/about',
+    component: path.resolve("./src/templates/about.tsx"),
+    context: {
+      limit: 3
+    },
+  })
+
+  createPage({
           path: '/',
           component: path.resolve("./src/templates/recent-blog-list.tsx"),
           context: {

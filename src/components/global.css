@@ -109,6 +109,10 @@ button {
   margin-left: 0;
 }
 
+/* html, body, #___gatsby  {
+  height: 100%;
+}
+#gatsby-focus-wrapper { height: 100vh;} */
 
 
 @media only screen and (min-width: 768px) {
